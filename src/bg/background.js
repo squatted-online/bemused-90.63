@@ -4,6 +4,10 @@
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
 
+// Storing index variables
+chrome.storage.local.set({"idx": 0}, function() {
+	console.log('Value is set to ' + 0);
+});
 
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(
@@ -11,3 +15,4 @@ chrome.extension.onMessage.addListener(
   	chrome.pageAction.show(sender.tab.id);
     sendResponse();
   });
+

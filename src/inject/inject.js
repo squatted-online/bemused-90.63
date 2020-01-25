@@ -12,18 +12,18 @@ var links =  [
 ];
 
 var texts =  [
-	"ma che figata",
-	"sto progetto spacca",
-	"boh non lo so",
-	"very very fun",
-	"yeah"
+	"0 - ma che figata",
+	"1 - sto progetto spacca",
+	"2 - boh non lo so",
+	"3 - very very fun",
+	"4 - yeah"
 ];
 
 
 
 // FUNCTIONS
 
-var getLocation = function(href) {
+function getLocation(href) {
     var l = document.createElement("a");
     l.href = href;
     return l;
@@ -50,6 +50,7 @@ chrome.extension.sendMessage({}, function(response) {
 		for (var i = 0; i < allLinks.length; i++){
 			var randomIndex = Math.floor( Math.random() * (links.length));
 			allLinks[i].setAttribute('href', links[randomIndex]);
+			allLinks[i].setAttribute('target', '_self');
 		}
 
 		// Getting current website
@@ -61,22 +62,42 @@ chrome.extension.sendMessage({}, function(response) {
 			// Inverts color according to injected css
 			document.querySelector("html").classList.add("inversed");
 
-			// Creating div
-			var div_wdt = 100;
-			var div_hgt = 100;
+			// Getting index
+			idx_promise = new Promise(function(resolve, reject) {
+				chrome.storage.local.get('idx', function(result) {
+					resolve(result);
+				});
+			});
 
-			var div_x = Math.round((window.innerWidth  - div_wdt) * Math.random());
-			var div_y = Math.round((window.innerHeight - div_hgt) * Math.random());
+			// Once you get the index, draw the div
+			idx_promise.then(function(idx_promise) {
 
-			var div = document.createElement("div");
-			div.classList.add("rectangle")
-			div.style.left = div_x + "px";
-			div.style.top  = div_y + "px";
-			div.style.width  = div_wdt + "px";
-			div.style.height = div_hgt + "px";
-			var randomIndex = Math.floor( Math.random() * (texts.length));
-			div.innerHTML = texts[randomIndex];
-			document.querySelector("body").appendChild(div);
+				console.log(idx_promise.idx);
+
+				// Creating div
+				var div_wdt = 100;
+				var div_hgt = 100;
+
+				var div_x = Math.round((window.innerWidth  - div_wdt) * Math.random());
+				var div_y = Math.round((window.innerHeight - div_hgt) * Math.random());
+
+				var div = document.createElement("div");
+				div.classList.add("rectangle")
+				div.style.left = div_x + "px";
+				div.style.top  = div_y + "px";
+				div.style.width  = div_wdt + "px";
+				div.style.height = div_hgt + "px";
+				div.innerHTML = texts[idx_promise.idx];
+				document.querySelector("body").appendChild(div);
+			});
+
+			// Updating index
+			chrome.storage.local.get("idx", function(result) {
+				var new_idx = (result.idx+1) % texts.length;
+				chrome.storage.local.set({"idx": new_idx}, function(){
+					// null
+				})
+			});
 		}
 	}
 	}, 10);
