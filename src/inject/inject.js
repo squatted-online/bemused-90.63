@@ -1,21 +1,24 @@
 // VARIABLES
 
 var links =  [
-"https://gattodubbioso.tk/",
-"https://bbtgnn.net/",
-"https://worlds.com/",
-"https://lust.nl/",
-"https://google.com/"
+	"http://www.resort.com/~banshee/Misc/8ball/",
+	"https://www.scaruffi.com/",
+	"http://travelassist.com/mag/mag_home.html",
+	"http://www.taco.com/",
+	"http://edition.cnn.com/US/OJ/",
+	"https://spork.org/",
+	"http://www.milamba.com/australia/",
+	"http://www.geocities.ws/dreddnott/default.html"
 ];
 
 var texts =  [
-"ma che figata",
-"sto progetto spacca",
-"boh non lo so",
-"very very fun",
-"yeah"
+	"ma che figata",
+	"sto progetto spacca",
+	"boh non lo so",
+	"very very fun",
+	"yeah"
 ];
-	
+
 
 
 // FUNCTIONS
