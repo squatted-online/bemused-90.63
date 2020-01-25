@@ -1,0 +1,30 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+
+html, body {
+background: white;
+height: 100%;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+padding: 1em;
+}
+
+.inversed {
+-webkit-filter: invert(100%);
+filter: invert(100%);
+}
+
+div.rectangle {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100px;
+    background: cyan;
+    color: black;
+    z-index: 999!important;
+    padding: 20px;
+}
