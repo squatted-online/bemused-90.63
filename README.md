@@ -23,7 +23,7 @@ Don’t use maps ask for directions
 Bemused 90.63% as an experimental journey is possible thanks to the creation of an open-source extension that modifies website navigation.
 The extension has a certain probability of modifying the web pages visited by the user, redirecting all clickable links to a random selection of disused sites. Once this happens, the user begins a journey through these forgotten internet pages, which are altered by CSS transformations to emphasize their decay. To give a sense of this journey, a drunken Virgil: a red text box appears in superimposition on each site, containing quotes from various sources on issues such as getting lost, the internet, surveillance.
 
-## Long project description:
+## Long project description
 
 Back in the old days, the Internet resembled more an unknown land than an archipelago of isolated platforms such as fortified cities. The fascination of that era was linked to a sense of discovery and disorientation: identities could be hidden and the first search engines still worked in a rudimentary way. At those times it was easy to get lost, wandering around sites with unusual graphics and unexpected colors.
 
