@@ -1,6 +1,15 @@
-/**
- * Place your custom CSS styles here.
- **/
+@font-face {
+    font-family: 'Le Murmure_Regular';
+    src:    url('Le_Murmure-Regular_web.eot');
+    src:    url('Le_Murmure-Regular_web.eot?#iefix') format('embedded-opentype'),
+            url('Le_Murmure-Regular_web.woff') format('woff'),
+            url('Le_Murmure-Regular_web.woff2') format('woff2'),
+            url('Le_Murmure-Regular_web.ttf') format('truetype'),
+            url('Le_Murmure-Regular_web.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 html, body {
     background: white;
@@ -21,9 +30,13 @@ filter: invert(100%);
 div.rectangle {
     box-sizing: border-box;
     position: absolute;
-    height: 100px;
-    background-color: cyan !important;
-    color: black;
+    width: 400px;
     z-index: 999!important;
     padding: 20px;
+}
+
+div.rectangle span {
+    background-color: cyan !important;
+    color: black;
+    font-family: 'Le Murmure_Regular';
 }

@@ -10,13 +10,12 @@ var links =  [
 	"http://www.milamba.com/australia/",
 	"http://www.geocities.ws/dreddnott/default.html",
 	"http://www.arngren.net/",
-	"http://toastytech.com/evil/",
-	""
+	"http://toastytech.com/evil/"
 ];
 
 var texts =  [
-	"In some profound way, cyberspace is another space. Unleashed into the internet, my \“location\” can no longer be fixed purely in physical space",
-	"But cyberspace has become much more than just a da space, because as we have noted much of what goes on there is information-oriented. As many commentators have stressed, primary use of cyberspace is not for information-gathering but social interaction and communication-and increasingly a l d interactive entertainment, including the creation of a buring number of online fantasy worlds in which people take o orate alter egos",
+	"In some profound way, cyberspace is another space. Unleashed into the internet, my \“location\” can no longer be fixed purely in physical space.",
+	"But cyberspace has become much more than just a space, because as we have noted much of what goes on there is information-oriented. As many commentators have stressed, primary use of cyberspace is not for information-gathering but social interaction and communication-and increasingly a l d interactive entertainment, including the creation of a buring number of online fantasy worlds in which people take o orate alter egos",
 	"Not to find one’s way in a city may well be uninteresting and banal. It requires ignorance—nothing more,\” says the twentieth-century philosopher-essayist Walter Benjamin. \“But to lose oneself in a city—as one loses oneself in a forest—that calls for quite a different schooling.\” To lose yourself: a voluptuous surrender, lost in your arms, lost to the world, utterly immersed in what is present so that its surroundings fade away. In Benjamin’s terms, to be lost is to be fully present, and to be fully present is to be capable of being in uncertainty and mystery. And one does not get lost but loses oneself, with the implication that it is a conscious choice, a chosen surrender, a psychic state achievable through geography.",
 	"That thing the nature of which is totally unknown to you is usually what you need to find, and finding it is a matter of getting lost. The word \“lost\” comes from the Old Norse los, meaning the disbanding of an army, and this origin suggests soldiers falling out of formation to go home, a truce with the wide world. I worry now that many people never disband their armies, never go beyond what they know.",
 	"Search-and-rescue teams have made an art of finding and a science of how people get lost, though as many or more of their forays are rescues for people who are injured or stranded. The simplest answer nowadays for literal getting lost is that a lot of the people who get lost aren’t paying attention when they do so, don’t know what to do when they realize they don’t know how to return, or don’t admit they don’t know.",
@@ -112,8 +111,12 @@ chrome.extension.sendMessage({}, function(response) {
 				
 				var div = document.createElement("div");
 				div.classList.add("rectangle");
-				div.innerHTML = texts[idx_promise.idx];
 				document.querySelector("body").appendChild(div);
+
+				var span = document.createElement("span");
+				span.classList.add("rectangletext")
+				span.innerHTML = texts[idx_promise.idx];
+				div.appendChild(span);
 
 				var div_wdt = div.offsetWidth;
 				var div_hgt = div.offsetHeight;
