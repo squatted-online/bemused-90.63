@@ -7,7 +7,7 @@ Within these sites have been modified by grafting the project manifesto through 
 Download the Chrome extension [here](https://github.com/squatted-online/chaos-engine)
 
 Created by The Virgilio team of [La Scuola Open Source](http://www.lascuolaopensource.xyz/en):  
-Emidio Torre, Giovanni Abbate Paolo, Tommaso Guariento, Alessandro Petrone, Arianna Smaron
+Emidio Torre, Giovanni Abbatepaolo, Tommaso Guariento, Alessandro Petrone, Arianna Smaron
 
 For the [squatted.online embassy](https://squatted.online) of the [Wrong Biennale 2020](https://thewrong.org)
 
