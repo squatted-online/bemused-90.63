@@ -4,7 +4,7 @@ What is Bemused 90.63% Extension?
 A Google Chrome extension that allows you to divert links from sites to old or broken sites.
 Within these sites have been modified by grafting the project manifesto through texts created by the authors and quotes from reference texts.
 
-Download the Chrome extension [here](https://github.com/squatted-online/chaos-engine)
+Download the Chrome extension [here](https://github.com/squatted-online/bemused-90.63/archive/master.zip)
 
 Created by The Virgilio team of [La Scuola Open Source](http://www.lascuolaopensource.xyz/en):  
 Emidio Torre, Giovanni Abbatepaolo, Tommaso Guariento, Alessandro Petrone, Arianna Smaron
