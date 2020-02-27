@@ -1,4 +1,4 @@
-# Bemused 90.63%
+# [Bemused 90.63%](https://squatted.online/squat/main_entrance/staircase/floor_0/back_door/neglected-garden/)
 
 What is Bemused 90.63% Extension?
 A Google Chrome extension that allows you to divert links from sites to old or broken sites.
