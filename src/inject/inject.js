@@ -10,7 +10,32 @@ var links =  [
 	"http://www.milamba.com/australia/",
 	"http://www.geocities.ws/dreddnott/default.html",
 	"http://www.arngren.net/",
-	"http://toastytech.com/evil/"
+	"http://toastytech.com/evil/",
+	"https://www.fogcam.org/",
+	"http://www.dolekemp96.org/main.htm",
+	"http://itcorp.com/",
+	"https://www.vortex.com/",
+	"https://www.tic.com/index.html",
+	"toad.com",
+	"https://www.cfg.com/",
+	"http://milk.com/",
+	"http://acme.com/",
+	"https://faculty.math.illinois.edu/K-theory/",
+	"http://www.snowcrest.net/kitty/hpages/index.html",
+	"https://www.stwing.upenn.edu/~durduran/cyprus3.html",
+	"http://multiple.insertions.com/mi_html/mi_intro.htm",
+	"http://www.frogsonice.com/froggy/",
+	"https://park.org/main.text.html",
+	"https://www.cl.cam.ac.uk/coffee/coffee.html",
+	"https://pubs.usgs.gov/of/1996/ofr-96-0263/",
+	"http://cds.library.brown.edu/projects/WWII_Women/tocCS.html",
+	"http://petstation.com/",
+	"http://www.info-s.com/old.html",
+	"https://www.oldradio.com/current/bc_faq.html",
+	"http://www.mattlake.com/",
+	"http://www.neonshop.com/",
+	"http://www.lavondyss.com/gallery/mythago.html",
+	"http://www.cs.cmu.edu/afs/cs.cmu.edu/user/bthom/www/BACKDOOR/index.html",
 ];
 
 var texts =  [
@@ -95,47 +120,47 @@ chrome.extension.sendMessage({}, function(response) {
 			// Inverts color according to injected css
 			document.querySelector("html").classList.add("inversed");
 
-			// Getting index
-			idx_promise = new Promise(function(resolve, reject) {
-				chrome.storage.local.get('idx', function(result) {
-					resolve(result);
-				});
-			});
+			// // Getting index
+			// idx_promise = new Promise(function(resolve, reject) {
+			// 	chrome.storage.local.get('idx', function(result) {
+			// 		resolve(result);
+			// 	});
+			// });
 
-			// Once you get the index, draw the div
-			idx_promise.then(function(idx_promise) {
+			// // Once you get the index, draw the div
+			// idx_promise.then(function(idx_promise) {
 
-				console.log(idx_promise.idx);
+			// 	console.log(idx_promise.idx);
 
-				// Creating div
-				
-				var div = document.createElement("div");
-				div.classList.add("rectangle");
-				document.querySelector("body").appendChild(div);
+			// Creating div
+			
+			var div = document.createElement("div");
+			div.classList.add("rectangle");
+			document.querySelector("body").appendChild(div);
 
-				var span = document.createElement("span");
-				span.classList.add("rectangletext")
-				span.innerHTML = texts[idx_promise.idx];
-				div.appendChild(span);
+			var span = document.createElement("span");
+			span.classList.add("rectangletext")
+			span.innerHTML = texts[Math.floor(Math.random() * texts.length)];
+			div.appendChild(span);
 
-				var div_wdt = div.offsetWidth;
-				var div_hgt = div.offsetHeight;
+			var div_wdt = div.offsetWidth;
+			var div_hgt = div.offsetHeight;
 
-				var div_x = Math.round((window.innerWidth  - div_wdt) * Math.random());
-				var div_y = Math.round((window.innerHeight - div_hgt) * Math.random());
-				div.style.left = div_x + "px";
-				div.style.top  = div_y + "px";
-				//div.style.width  = div_wdt + "px";
-				//div.style.height = div_hgt + "px";
-			});
+			var div_x = Math.round((window.innerWidth  - div_wdt) * Math.random());
+			var div_y = Math.round((window.innerHeight - div_hgt) * Math.random());
+			div.style.left = div_x + "px";
+			div.style.top  = div_y + "px";
+			//div.style.width  = div_wdt + "px";
+			//div.style.height = div_hgt + "px";
+			// });
 
-			// Updating index
-			chrome.storage.local.get("idx", function(result) {
-				var new_idx = (result.idx+1) % texts.length;
-				chrome.storage.local.set({"idx": new_idx}, function(){
-					// null
-				})
-			});
+			// // Updating index
+			// chrome.storage.local.get("idx", function(result) {
+			// 	var new_idx = (result.idx+1) % texts.length;
+			// 	chrome.storage.local.set({"idx": new_idx}, function(){
+			// 		// null
+			// 	})
+			// });
 		}
 	}
 	}, 10);
