@@ -12,6 +12,11 @@ Emidio Torre, Giovanni Abbatepaolo, Tommaso Guariento, Alessandro Petrone, Arian
 For the [squatted.online embassy](https://squatted.online) of the [Wrong Biennale 2020](https://thewrong.org)
 
 
+## Quick installation tutorial
+![Quick installation tutorial](tutorial-how-to-use-bemused-exte.gif)
+(A little note: once in chrome extension tab, activate developer mode by clicking on the top-right switch.)
+
+
 ## Short project description
 
 Don’t use maps ask for directions
