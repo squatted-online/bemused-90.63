@@ -14,6 +14,7 @@ For the [squatted.online embassy](https://squatted.online) of the [Wrong Biennal
 
 ## Quick installation tutorial
 ![Quick installation tutorial](tutorial-how-to-use-bemused-exte.gif)
+
 (A little note: once in chrome extension tab, activate developer mode by clicking on the top-right switch.)
 
 
